@@ -35,7 +35,7 @@ export default function App() {
           animate="show"
           variants={fadeUp}
         >
-          <p className="eyebrow">Ali K presents</p>
+          {/* <p className="eyebrow">Ali K presents</p> */}
 
           <h1 className="hero-title">
             BYU<span>FIT</span>
@@ -46,13 +46,17 @@ export default function App() {
           </h2>
 
           <p className="hero-text">
-            Online 1-on-1 coaching built for athletes, bodybuilders, and anyone ready
-            to train with structure, intensity, and purpose.
+            Online 1-on-1 coaching built for athletes, bodybuilders, and anyone
+            ready to train with structure, intensity, and purpose.
           </p>
 
           <div className="hero-buttons">
-            <a href="#packages" className="button">View Packages</a>
-            <a href="#contact" className="button secondary">Apply for 1-on-1</a>
+            <a href="#packages" className="button">
+              View Packages
+            </a>
+            <a href="#contact" className="button secondary">
+              Apply for 1-on-1
+            </a>
           </div>
 
           <div className="rotating-words">
@@ -65,7 +69,12 @@ export default function App() {
       </section>
 
       <section className="section grid-two">
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp}>
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
           <p className="eyebrow">Transform your life</p>
           <h2>Real coaching. Real accountability. Real results.</h2>
           <p>
@@ -75,13 +84,31 @@ export default function App() {
           </p>
 
           <div className="features">
-            <Feature icon={<Dumbbell />} title="Custom Training" text="Programs built around your body, goals, and schedule." />
-            <Feature icon={<Utensils />} title="Nutrition Guidance" text="Simple, realistic nutrition that supports results." />
-            <Feature icon={<MessageCircle />} title="Coach Support" text="Stay accountable with check-ins and feedback." />
+            <Feature
+              icon={<Dumbbell />}
+              title="Custom Training"
+              text="Programs built around your body, goals, and schedule."
+            />
+            <Feature
+              icon={<Utensils />}
+              title="Nutrition Guidance"
+              text="Simple, realistic nutrition that supports results."
+            />
+            <Feature
+              icon={<MessageCircle />}
+              title="Coach Support"
+              text="Stay accountable with check-ins and feedback."
+            />
           </div>
         </motion.div>
 
-        <motion.div className="image-placeholder" initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp}>
+        <motion.div
+          className="image-placeholder"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
           <span>Before / After Transformation</span>
         </motion.div>
       </section>
@@ -91,9 +118,40 @@ export default function App() {
         <h2>Choose your path.</h2>
 
         <div className="cards">
-          <Package title="Starter" price="$199" length="4 Weeks" items={["Custom training plan", "Nutrition targets", "Weekly check-in"]} />
-          <Package popular title="Elite" price="$499" length="12 Weeks" items={["Custom training plan", "Nutrition guidance", "Weekly check-ins", "Form feedback", "24/7 support"]} />
-          <Package title="1-on-1 Coaching" price="$999" length="12 Weeks" items={["Everything in Elite", "Priority support", "Video calls", "Advanced customization"]} />
+          <Package
+            title="Starter"
+            price="$199"
+            length="4 Weeks"
+            items={[
+              "Custom training plan",
+              "Nutrition targets",
+              "Weekly check-in",
+            ]}
+          />
+          <Package
+            popular
+            title="Elite"
+            price="$499"
+            length="12 Weeks"
+            items={[
+              "Custom training plan",
+              "Nutrition guidance",
+              "Weekly check-ins",
+              "Form feedback",
+              "24/7 support",
+            ]}
+          />
+          <Package
+            title="1-on-1 Coaching"
+            price="$999"
+            length="12 Weeks"
+            items={[
+              "Everything in Elite",
+              "Priority support",
+              "Video calls",
+              "Advanced customization",
+            ]}
+          />
         </div>
       </section>
 
