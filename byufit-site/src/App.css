@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap");
+
+:root {
+  --red: #ef1020;
+  --black: #030303;
+  --dark: #0b0b0b;
+  --gray: #b8b1ae;
+  --green-gray: #647360;
+  --white: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: Inter, sans-serif;
+}
+
+.site {
+  overflow-x: hidden;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 6%;
+  background: linear-gradient(to bottom, rgba(0,0,0,.85), transparent);
+}
+
+.ak-logo {
+  font-family: Anton, sans-serif;
+  font-size: 34px;
+  letter-spacing: -2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  background: var(--red);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  text-transform: uppercase;
+  font-weight: 800;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.nav-btn {
+  box-shadow: 0 0 30px rgba(239,16,32,.35);
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  padding: 170px 6% 80px;
+  background:
+    linear-gradient(to right, #000 0%, rgba(0,0,0,.9) 35%, rgba(0,0,0,.3)),
+    url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1800") center/cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 50%, rgba(239,16,32,.2), transparent 35%);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 720px;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-family: Anton, sans-serif;
+  font-size: clamp(80px, 14vw, 170px);
+  margin: 0;
+  line-height: .9;
+  font-style: italic;
+}
+
+h1 span {
+  color: var(--red);
+}
+
+h2 {
+  font-family: Anton, sans-serif;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 1;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
+
+.hero h2 {
+  font-size: clamp(30px, 4vw, 54px);
+}
+
+.hero-text {
+  max-width: 520px;
+  color: #c8c8c8;
+  font-size: 18px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  margin: 36px 0;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid white;
+}
+
+.rotating-words {
+  display: flex;
+  gap: 28px;
+  margin-top: 60px;
+  font-family: Anton;
+  font-size: clamp(24px, 4vw, 42px);
+  color: #555;
+}
+
+.rotating-words span:first-child {
+  color: white;
+  border-bottom: 4px solid var(--red);
+}
+
+.video-card {
+  position: absolute;
+  right: 10%;
+  top: 45%;
+  z-index: 3;
+  text-align: center;
+}
+
+.play {
+  width: 92px;
+  height: 92px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+.video-card p {
+  font-family: Anton;
+  font-size: 28px;
+  transform: rotate(-8deg);
+}
+
+.section {
+  padding: 100px 6%;
+  background: linear-gradient(135deg, #090909, #151515);
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.section p {
+  color: #c9c9c9;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.feature svg {
+  color: var(--red);
+}
+
+.feature h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.image-placeholder {
+  min-height: 420px;
+  border: 1px solid #333;
+  background:
+    linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=1200") center/cover;
+  display: grid;
+  place-items: end start;
+  padding: 24px;
+  font-family: Anton;
+  font-size: 28px;
+}
+
+.packages {
+  background: #050505;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.package {
+  position: relative;
+  background: linear-gradient(145deg, #181818, #0a0a0a);
+  border: 1px solid #333;
+  padding: 42px 32px;
+  min-height: 460px;
+}
+
+.package.popular {
+  border-color: var(--red);
+  box-shadow: 0 0 50px rgba(239,16,32,.18);
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--red);
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.package h3 {
+  font-family: Anton;
+  font-size: 36px;
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+.package h4 {
+  font-size: 48px;
+  margin: 20px 0 0;
+}
+
+.length,
+.payment {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.package ul {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
+}
+
+.package li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  color: #ddd;
+}
+
+.package button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.cta {
+  padding: 70px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(239,16,32,.25), rgba(0,0,0,.95)),
+    #090909;
+}
+
+.cta h2 {
+  max-width: 700px;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .grid-two,
+  .cards,
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-top: 60px;
+  }
+
+  .hero-buttons,
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
